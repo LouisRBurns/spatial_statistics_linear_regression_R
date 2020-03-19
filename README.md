@@ -12,17 +12,17 @@ We were to select and transform at least 5 features, build a linear model, and a
 
 The features I selected were crime rate, Obama voting rate, Hispanic population, college education, poverty rates, and urban/rural. My rational for using crime was the research showing that cities scales at a rate of 15% efficiency gain with size. That applies to crime as well. My professor didn't buy it even though [I cited sources](https://medium.com/the-long-now-foundation/why-cities-live-forever-3cd451c0c48d). 
 ### Discussion
-The main mistake I made on this exam was that I transformed the voting rate incorrectly which was the target variable. I made that mistake at the beginning and it made everything else wrong. We were taught to log transform skewed data to make it more normally distributed but we weren't told not to do that to percentages. I've since learned you're supposed to do a more complicated transformation that we didn't cover if you actually care about the shape of the data.
+The main mistake I made on this exam was that I transformed the voting rate incorrectly which was the target variable. I made that mistake at the beginning and it made everything else wrong. We were taught to log transform skewed data to make it more normally distributed but we weren't told not to do that to percentages. I've since learned you're supposed to do a more complicated transformation that we didn't cover if you actually care about the shape of the data. There were other mistakes too but they weren't that interesting.
 
 I'll show the scatterplot matrix here because I like those:
-![alt text](/blob/master/Scatterplot Transformed Variables.png "Scatterplot Matrix")
+![alt text](https://github.com/LouisRBurns/spatial_statistics_linear_regression_R/blob/master/Scatterplot%20Transformed%20Variables.png "Scatterplot Matrix")
 
 Another issue with this test is that to adjust for spatial autocorrelation, we draw this network:
-![alt text](/blob/master/Link Map.png "County Network")
+![alt text](https://github.com/LouisRBurns/spatial_statistics_linear_regression_R/blob/master/Link%20Map.png "County Network")
 That allows R to follow the links to understand what is connected to what. The problem is that it assumes that things are related just because they are next to each other - which is a silly assumption in this instance. The urban/rural factor already accounts for that. And the fact that cities tend to vote Democratic and rural towns Republican was captured in the proxy for city size - crime. It also ignores the fact that geographic places are connected by highways. If we believe geographic proximity is important then we need to account for drive time, not riding a horse in a straight line to the center of each county. 
 
 And then here are some diagnostic plots: 
-![alt text](/blob/master/Diagnostic Plots Mod1.png "Diagnostic Plots")
+![alt text](https://github.com/LouisRBurns/spatial_statistics_linear_regression_R/blob/master/Diagnostic%20Plots%20Mod1.png "Diagnostic Plots")
 These are fun because it's easy to visually pick out outliers. Obviously Texas counties have several. The county population is estimated to range between 4.6 million for Harris County (Houston) down to Loving County with 134 people. As of the [2017 census survey](https://en.wikipedia.org/wiki/List_of_counties_in_Texas), there were 8 counties with less than 1000 people which makes the Texas Senate a bit of a joke that 134 country people would have the same representation as 4.6 million city dwellers. It also makes this particular analysis a bit meaningless even if I had done the transformation correctly.
 ### Results
 I failed this qualifier. Funny thing was that out of the 3 of us taking it, 2 failed and the other technically should have failed because he didn't use enough features and took extra time other than what was allotted. So basically no one usually passes this test.
