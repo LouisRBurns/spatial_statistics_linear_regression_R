@@ -29,4 +29,4 @@ I failed this qualifier. Funny thing was that out of the 3 of us taking it, 2 fa
 
 This and the Theories qualifier helped me understand that I didn't really want to do doctoral research with this program. My interests are in the implications of network science on geography and GIS as a field can't accept that network affects exist beyond transportation networks and proximity. It's similar to the state of economics before they realized psychology matters and evolved into behavioral economics.
 
-Hopefully, it goes without saying that if you are a doctoral student about to take your GIS qualifier, don't use this code. You shall not pass. :)
+Hopefully, it goes without saying that if you are a doctoral student about to take your GIS qualifier, don't use this code. You shall not pass. :blush:
